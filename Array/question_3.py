@@ -16,5 +16,4 @@ for i in arr:
     if i - min_num > max_diff:
         max_diff = i - min_num
 
-
-print("Max diff : " , max_diff)
+print("Max diff : ", max_diff)
