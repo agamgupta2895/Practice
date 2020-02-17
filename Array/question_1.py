@@ -3,8 +3,6 @@
 size = int(input("Number of elements in an array"))
 
 arr = {}
-
-
 l = []
 for i in range(0, size):
     elements = int(input("Enter the number"))
@@ -12,8 +10,6 @@ for i in range(0, size):
     arr[elements] = 0
 
 sum = int(input("Sum of the number "))
-
-print(arr)
 
 for element in l:
     firstNum = element
