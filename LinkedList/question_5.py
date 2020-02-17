@@ -1,3 +1,4 @@
+# Insert an element in a sorted linkedlist
 class Node:
     def __init__(self, data):
         self.data = data
@@ -18,19 +19,13 @@ class LinkedList:
             temp = temp.next
         temp.next = new_node
 
-    def push(self, data):
-        new_node = Node(data)
-        new_node.next = self.head
-        self.head = new_node
-
-    def insertAfter(self, prev_data, data):
+    def insert(self, data):
         new_node = Node(data)
         temp = self.head
         while temp:
-            temp = temp.next
-            if temp.data == prev_data:
+            if temp.data <= data < temp.next.data:
                 break
-
+            temp = temp.next
         new_node.next = temp.next
         temp.next = new_node
 
@@ -45,9 +40,7 @@ class LinkedList:
 if __name__ == '__main__':
     linkedList = LinkedList()
     linkedList.append(5)
-    linkedList.append(6)
     linkedList.append(7)
     linkedList.append(58)
-    linkedList.append(9)
-    linkedList.insertAfter(6, 100)
+    linkedList.insert(10)
     linkedList.printList()
